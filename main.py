@@ -1,10 +1,10 @@
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from core.database.settings import engine, Base, get_db
-from core.database import models
-from core.schemas import schema
+from src.core.database.settings import engine, Base, get_db
+from src.core.database import models
+from src.core.schemas import schema
 from sqlalchemy.orm import Session
-from core.services import get_location, get_route_distance
+from src.core.services import get_location, get_route_distance
 from datetime import datetime
 
 app = FastAPI()
